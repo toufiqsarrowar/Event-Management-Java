@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="#FDD835"
+    android:padding="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Event Information"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="1sp"
+            app:autoSizeMaxTextSize="25sp"
+            app:autoSizeStepGranularity="1sp">
+        </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#e9eef1"
+            android:padding="5dp">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+                    <TextView
+                        android:text="Name"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"/>
+                    <EditText
+                        android:id="@+id/name"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:text="Place"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"/>
+                    <EditText
+                        android:id="@+id/place"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Type"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"/>
+                    <RadioGroup
+                        android:id="@+id/radiogroup"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:id="@+id/rdindoor"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="15dp"
+                            android:text="indoor"
+                            android:textColor="@color/black"/>
+                        <RadioButton
+                            android:id="@+id/rdoutdoor"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="15dp"
+                            android:text="outdoor"
+                            android:textColor="@color/black"
+                            />
+                        <RadioButton
+                            android:id="@+id/rdonline"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="15dp"
+                            android:text="online"
+                            android:textColor="@color/black"
+                            />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:textColor="@color/black"
+                        android:text="Date &amp; Time"
+                        android:textSize="20dp"/>
+                    <EditText
+                        android:id="@+id/datetime"
+                        android:inputType="date"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:textColor="@color/black"
+                        android:text="Capacity"
+                        android:textSize="20dp"/>
+                    <EditText
+                        android:id="@+id/capacity"
+                        android:inputType="numberSigned"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:textColor="@color/black"
+                        android:text="Budget"
+                        android:textSize="20dp"/>
+                    <EditText
+                        android:id="@+id/budget"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:textColor="@color/black"
+                        android:text="Email"
+                        android:textSize="20dp"/>
+                    <EditText
+                        android:id="@+id/email"
+                        android:inputType="textEmailAddress"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:textColor="@color/black"
+                        android:text="Phone"
+                        android:textSize="20dp"/>
+                    <EditText
+                        android:id="@+id/phone"
+                        android:inputType="phone"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:text="Description"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"/>
+                    <EditText
+                        android:id="@+id/description"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"/>
+                </TableRow>
+            </TableLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/errormessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text=""
+                    android:textColor="#E65A46"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Event List"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:backgroundTint="#FDD835"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Share"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:backgroundTint="#FDD835"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:backgroundTint="#FDD835"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
